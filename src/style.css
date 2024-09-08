@@ -22,6 +22,7 @@ body{
 }
 
 .resume{
+    display: none;
     background-color: white;
     width: 680px;
     border: 1px solid black;
