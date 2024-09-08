@@ -45,3 +45,13 @@ editableTexts.forEach(function (elem) {
         elem.innerHTML = userInput;
     });
 });
+var download_btn = document.getElementById('download_btn');
+download_btn.addEventListener('click', (function () {
+    downloadPdf();
+}));
+function downloadPdf() {
+    var element = document.querySelector('.resume');
+    html2pdf()
+        .from(element)
+        .save();
+}

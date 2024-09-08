@@ -62,3 +62,20 @@ editableTexts.forEach((elem) => {
         elem.innerHTML = userInput;
     });
 });
+
+const download_btn = document.getElementById('download_btn') as HTMLButtonElement;
+
+
+download_btn.addEventListener('click', (() => {
+    downloadPdf()
+}))
+
+
+declare var html2pdf: any;
+function downloadPdf(){
+    const element = document.querySelector('.resume') as HTMLDivElement;
+
+    html2pdf()
+    .from(element)
+    .save()
+}
