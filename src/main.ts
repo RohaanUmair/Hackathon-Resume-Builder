@@ -14,6 +14,7 @@ const form_exp = document.getElementById('form_exp') as HTMLInputElement;
 const form_main_skill = document.getElementById('form_main_skill') as HTMLInputElement;
 const form_sub_skills = document.getElementById('form_sub_skills') as HTMLInputElement;
 
+const editableTexts = document.querySelectorAll('.details');
 
 
 
@@ -52,3 +53,12 @@ form.addEventListener(('submit'), ((e) => {
     resume.style.display = 'block';
     form.style.display = 'none';
 }));
+
+
+
+editableTexts.forEach((elem) => {
+    elem.addEventListener('click', function(){
+        let userInput = prompt('Edit') as string;
+        elem.innerHTML = userInput;
+    });
+});

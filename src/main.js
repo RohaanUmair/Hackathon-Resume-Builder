@@ -11,6 +11,7 @@ var form_comapny = document.getElementById('form_comapny');
 var form_exp = document.getElementById('form_exp');
 var form_main_skill = document.getElementById('form_main_skill');
 var form_sub_skills = document.getElementById('form_sub_skills');
+var editableTexts = document.querySelectorAll('.details');
 var showSkills = false;
 toggleSkillsBtn === null || toggleSkillsBtn === void 0 ? void 0 : toggleSkillsBtn.addEventListener(('click'), (function () {
     if (showSkills) {
@@ -38,3 +39,9 @@ form.addEventListener(('submit'), (function (e) {
     resume.style.display = 'block';
     form.style.display = 'none';
 }));
+editableTexts.forEach(function (elem) {
+    elem.addEventListener('click', function () {
+        var userInput = prompt('Edit');
+        elem.innerHTML = userInput;
+    });
+});
