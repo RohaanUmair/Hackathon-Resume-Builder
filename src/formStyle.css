@@ -47,3 +47,10 @@ form{
 #generate_resume_btm:active{
     background-color: rgb(0, 96, 255);
 }
+
+@media (max-width: 550px) {
+    .form_section input{
+        width: 300px;
+        padding: 0;
+    }
+}
